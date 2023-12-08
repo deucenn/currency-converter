@@ -25,7 +25,7 @@ Takes two numbers and returns the sum.
 
 ## Demo
 
-https://currency-converter-rb.netlify.app/
+https://currency-converter-rb.netlify.app
 
 
 ## Roadmap
