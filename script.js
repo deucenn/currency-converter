@@ -38,7 +38,9 @@ const currencySymbols = [
   { code: "ILS", symbol: "₪" },
 ];
 
-console.log(currencySymbols.find(item => item.code === outCurEl.value).symbol)
+console.log(
+  currencySymbols.find((item) => item.code === outCurEl.value).symbol
+);
 
 convertEl.addEventListener("click", () => {
   fetch(
@@ -51,7 +53,9 @@ convertEl.addEventListener("click", () => {
     .then((data) => {
       const conversionRate = data.conversion_rates[outCurEl.value];
       const convertedValue = (inputEl.value * conversionRate).toFixed(2);
-      const currMarkup = `<h3>${convertedValue}${currencySymbols.find(item => item.code === outCurEl.value).symbol}</h3>`;
+      const currMarkup = `<h3>${convertedValue}${
+        currencySymbols.find((item) => item.code === outCurEl.value).symbol
+      }</h3>`;
 
       outputEl.innerHTML = currMarkup; // Clear previous results and display new result
     })
